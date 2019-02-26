@@ -18,6 +18,8 @@
 		297F6D1122256B05005FB197 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 297F6D1022256B05005FB197 /* GoogleService-Info.plist */; };
 		297F6D13222570DC005FB197 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297F6D12222570DC005FB197 /* DataService.swift */; };
 		297F6D1622257144005FB197 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297F6D1522257144005FB197 /* Config.swift */; };
+		297F6D18222587CC005FB197 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297F6D17222587CC005FB197 /* CustomTextField.swift */; };
+		297F6D1A22258FC6005FB197 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297F6D1922258FC6005FB197 /* AuthService.swift */; };
 		F27A38D7F8C546879C9334DE /* Pods_DailyDevs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC61E832EC2E0CA524EF69CD /* Pods_DailyDevs.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		297F6D1022256B05005FB197 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		297F6D12222570DC005FB197 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		297F6D1522257144005FB197 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		297F6D17222587CC005FB197 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		297F6D1922258FC6005FB197 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		693D095A6731653396A7A1BB /* Pods-DailyDevsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyDevsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyDevsTests/Pods-DailyDevsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6AD15B6A7C3074D954D97FD7 /* Pods-DailyDevs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyDevs.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyDevs/Pods-DailyDevs.release.xcconfig"; sourceTree = "<group>"; };
 		AC61E832EC2E0CA524EF69CD /* Pods_DailyDevs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyDevs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +138,7 @@
 		297F6D0C222561D2005FB197 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				297F6D17222587CC005FB197 /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				297F6D12222570DC005FB197 /* DataService.swift */,
+				297F6D1922258FC6005FB197 /* AuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -370,9 +376,11 @@
 			files = (
 				297F6CEE222561B6005FB197 /* SecondViewController.swift in Sources */,
 				297F6CEA222561B6005FB197 /* AppDelegate.swift in Sources */,
+				297F6D18222587CC005FB197 /* CustomTextField.swift in Sources */,
 				297F6D1622257144005FB197 /* Config.swift in Sources */,
 				297F6CEC222561B6005FB197 /* FirstViewController.swift in Sources */,
 				297F6D13222570DC005FB197 /* DataService.swift in Sources */,
+				297F6D1A22258FC6005FB197 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
