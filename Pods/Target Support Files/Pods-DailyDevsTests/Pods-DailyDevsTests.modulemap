@@ -1,0 +1,6 @@
+framework module Pods_DailyDevsTests {
+  umbrella header "Pods-DailyDevsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
