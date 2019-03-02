@@ -15,6 +15,7 @@ class SplashVC: UIViewController {
         super.viewDidLoad()
 
         if Auth.auth().currentUser == nil {
+            debugPrint("current uid is \(String(describing: Auth.auth().currentUser))")
             Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(SplashVC.navigateToLoginVC), userInfo: nil, repeats: false)
         }else {
             Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(SplashVC.navigateToMainScreen), userInfo: nil, repeats: false)

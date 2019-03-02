@@ -24,6 +24,10 @@
 		29B06F52222760A5004090B6 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B06F51222760A5004090B6 /* AuthVC.swift */; };
 		29B06F54222760BE004090B6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B06F53222760BE004090B6 /* LoginVC.swift */; };
 		29B06F56222760DB004090B6 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B06F55222760DB004090B6 /* SplashVC.swift */; };
+		29B8F276222A422F00EA6180 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B8F275222A422F00EA6180 /* FeedCell.swift */; };
+		29B8F278222A5E1700EA6180 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B8F277222A5E1700EA6180 /* Post.swift */; };
+		29DF1D9622294E1300EE1BCA /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DF1D9522294E1300EE1BCA /* PostVC.swift */; };
+		29DF1D9822296DEF00EE1BCA /* KeyboardBindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DF1D9722296DEF00EE1BCA /* KeyboardBindView.swift */; };
 		F27A38D7F8C546879C9334DE /* Pods_DailyDevs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC61E832EC2E0CA524EF69CD /* Pods_DailyDevs.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +62,10 @@
 		29B06F51222760A5004090B6 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		29B06F53222760BE004090B6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		29B06F55222760DB004090B6 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		29B8F275222A422F00EA6180 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		29B8F277222A5E1700EA6180 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		29DF1D9522294E1300EE1BCA /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
+		29DF1D9722296DEF00EE1BCA /* KeyboardBindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBindView.swift; sourceTree = "<group>"; };
 		693D095A6731653396A7A1BB /* Pods-DailyDevsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyDevsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyDevsTests/Pods-DailyDevsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6AD15B6A7C3074D954D97FD7 /* Pods-DailyDevs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyDevs.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyDevs/Pods-DailyDevs.release.xcconfig"; sourceTree = "<group>"; };
 		AC61E832EC2E0CA524EF69CD /* Pods_DailyDevs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyDevs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +151,7 @@
 				29B06F53222760BE004090B6 /* LoginVC.swift */,
 				29B06F55222760DB004090B6 /* SplashVC.swift */,
 				2914F60F2229029900742949 /* ProfileVC.swift */,
+				29DF1D9522294E1300EE1BCA /* PostVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -151,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				297F6D17222587CC005FB197 /* CustomTextField.swift */,
+				29B8F275222A422F00EA6180 /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,6 +168,7 @@
 		297F6D0D222561D9005FB197 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				29B8F277222A5E1700EA6180 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,6 +176,7 @@
 		297F6D0E222561E1005FB197 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				29DF1D9722296DEF00EE1BCA /* KeyboardBindView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -389,9 +401,13 @@
 				297F6CEE222561B6005FB197 /* GroupsVC.swift in Sources */,
 				29B06F56222760DB004090B6 /* SplashVC.swift in Sources */,
 				297F6CEA222561B6005FB197 /* AppDelegate.swift in Sources */,
+				29DF1D9822296DEF00EE1BCA /* KeyboardBindView.swift in Sources */,
 				29B06F52222760A5004090B6 /* AuthVC.swift in Sources */,
 				297F6D18222587CC005FB197 /* CustomTextField.swift in Sources */,
 				297F6D1622257144005FB197 /* Config.swift in Sources */,
+				29B8F276222A422F00EA6180 /* FeedCell.swift in Sources */,
+				29DF1D9622294E1300EE1BCA /* PostVC.swift in Sources */,
+				29B8F278222A5E1700EA6180 /* Post.swift in Sources */,
 				29B06F54222760BE004090B6 /* LoginVC.swift in Sources */,
 				297F6CEC222561B6005FB197 /* FeedVC.swift in Sources */,
 				297F6D13222570DC005FB197 /* DataService.swift in Sources */,

@@ -12,6 +12,7 @@ import Firebase
 class DataService {
     
     static let instance = DataService()
+    var postArray = [Post]()
     
     //GET REF DB
     var REF_BASE: DatabaseReference { return _REF_BASE }
@@ -23,4 +24,44 @@ class DataService {
     func createUser(uid: String, userAccount: Dictionary<String,Any>) {
         REF_USER.child(uid).updateChildValues(userAccount)
     }
+    
+    func createNewPost(withMessage message: String, fromUID uid: String, groupKey key: String, completion: @escaping (_ status: Bool )-> ()) {
+        
+        if key !=  "" {
+            
+        }else {
+            REF_FEED.childByAutoId().updateChildValues(["content" : message, "senderID": uid])
+            completion(true)
+        }
+    }
+    
+    func getUserName(uid: String ,completion: @escaping (_ userName: String) -> ()) {
+        REF_USER.observeSingleEvent(of: .value) { (userData) in
+            guard let userSnapshot = userData.children.allObjects as? [DataSnapshot] else { return }
+            
+            for user in userSnapshot {
+                if user.key == uid {
+                    completion(user.childSnapshot(forPath: "email").value as! String)
+                }
+             }
+        }
+    }
+    
+    func fetchAllPosts(completion: @escaping (_ status: Bool) -> ()) {
+        postArray.removeAll()
+        REF_FEED.observeSingleEvent(of: .value) { (feedSnapshot) in
+            guard let feedSnapshot = feedSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            
+            for feed in feedSnapshot {
+                let content = feed.childSnapshot(forPath: "content").value as! String
+                let senderId = feed.childSnapshot(forPath: "senderID").value as! String
+                
+                let newPost = Post(content: content, senderId: senderId)
+                self.postArray.append(newPost)
+            }
+            
+            completion(true)
+        }
+    }
+    
 }
