@@ -35,7 +35,7 @@ class GroupFeedVC: UIViewController {
                 self.groupFeedTableView.reloadData()
                 
                 if self.groupMessage.count > 0 {
-                    let index = IndexPath(row: self.groupMessage.count, section: 0)
+                    let index = IndexPath(row: self.groupMessage.count - 1, section: 0)
                     self.groupFeedTableView.scrollToRow(at: index, at: .none, animated: true)
                 }
             })
@@ -47,7 +47,7 @@ class GroupFeedVC: UIViewController {
     }
     
     @IBAction func goBack(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismissDetail()
     }
     
     @IBAction func sendPost(_ sender: Any) {

@@ -582,17 +582,45 @@
                                     <constraint firstItem="ACX-yi-jkU" firstAttribute="top" secondItem="M9o-Jf-ASa" secondAttribute="top" constant="38" id="vfq-Jv-fHu"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d8d-72-f5p">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d8d-72-f5p">
                                 <rect key="frame" x="0.0" y="385" width="375" height="344"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="66" id="gfo-Ap-MwY">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="66"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="user_feed_cell" rowHeight="80" id="gfo-Ap-MwY" customClass="UserFeedCell" customModule="DailyDevs" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gfo-Ap-MwY" id="I4u-s7-chE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tifo@ngopi,men" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xo4-An-nhu">
+                                                    <rect key="frame" x="15" y="11" width="126" height="24"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                                    <color key="textColor" red="0.06227480237" green="0.1466626785" blue="0.30327966369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="my message hehee" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJ5-qu-tha">
+                                                    <rect key="frame" x="15" y="40" width="335" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="a4i-7l-ex8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.06227480237" green="0.1466626785" blue="0.30327966369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xo4-An-nhu" firstAttribute="top" secondItem="I4u-s7-chE" secondAttribute="topMargin" id="9VA-yM-WdP"/>
+                                                <constraint firstItem="Xo4-An-nhu" firstAttribute="leading" secondItem="I4u-s7-chE" secondAttribute="leadingMargin" id="Jmd-YJ-u7D"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eJ5-qu-tha" secondAttribute="trailing" constant="10" id="aPE-Bw-zQ9"/>
+                                                <constraint firstItem="eJ5-qu-tha" firstAttribute="top" secondItem="Xo4-An-nhu" secondAttribute="bottom" constant="5" id="c7B-8M-Aia"/>
+                                                <constraint firstItem="eJ5-qu-tha" firstAttribute="leading" secondItem="I4u-s7-chE" secondAttribute="leadingMargin" id="hVX-jC-Eza"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="userName" destination="Xo4-An-nhu" id="DcL-2N-ujj"/>
+                                            <outlet property="userPost" destination="eJ5-qu-tha" id="La3-2E-exP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -614,13 +642,14 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="me-tabIcon" selectedImage="me-tabIcon" id="9gw-ZM-57n"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="postTableView" destination="d8d-72-f5p" id="FFV-rB-e4i"/>
                         <outlet property="profileImage" destination="ACX-yi-jkU" id="59a-jw-rO8"/>
                         <outlet property="userName" destination="6cH-Eh-XTk" id="VIt-BR-byM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4is-cH-aef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1377" y="868"/>
+            <point key="canvasLocation" x="1376.8" y="867.48768472906409"/>
         </scene>
         <!--Feeds-->
         <scene sceneID="Zek-4e-bDk">

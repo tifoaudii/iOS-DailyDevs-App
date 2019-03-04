@@ -32,6 +32,8 @@
 		29B06F56222760DB004090B6 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B06F55222760DB004090B6 /* SplashVC.swift */; };
 		29B8F276222A422F00EA6180 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B8F275222A422F00EA6180 /* FeedCell.swift */; };
 		29B8F278222A5E1700EA6180 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B8F277222A5E1700EA6180 /* Post.swift */; };
+		29BC9F0A222D5EF100249D3A /* PresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC9F09222D5EF100249D3A /* PresentTransition.swift */; };
+		29BC9F0C222D60D000249D3A /* UserFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC9F0B222D60D000249D3A /* UserFeedCell.swift */; };
 		29DF1D9622294E1300EE1BCA /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DF1D9522294E1300EE1BCA /* PostVC.swift */; };
 		29DF1D9822296DEF00EE1BCA /* KeyboardBindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DF1D9722296DEF00EE1BCA /* KeyboardBindView.swift */; };
 		F27A38D7F8C546879C9334DE /* Pods_DailyDevs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC61E832EC2E0CA524EF69CD /* Pods_DailyDevs.framework */; };
@@ -76,6 +78,8 @@
 		29B06F55222760DB004090B6 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		29B8F275222A422F00EA6180 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		29B8F277222A5E1700EA6180 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		29BC9F09222D5EF100249D3A /* PresentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTransition.swift; sourceTree = "<group>"; };
+		29BC9F0B222D60D000249D3A /* UserFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedCell.swift; sourceTree = "<group>"; };
 		29DF1D9522294E1300EE1BCA /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		29DF1D9722296DEF00EE1BCA /* KeyboardBindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBindView.swift; sourceTree = "<group>"; };
 		693D095A6731653396A7A1BB /* Pods-DailyDevsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyDevsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyDevsTests/Pods-DailyDevsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 				29562B1E222B907700B6ECA8 /* UserCell.swift */,
 				29619814222C0D95005D07A4 /* GroupCell.swift */,
 				29471966222CB27400AB488B /* GroupFeedCell.swift */,
+				29BC9F0B222D60D000249D3A /* UserFeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				29DF1D9722296DEF00EE1BCA /* KeyboardBindView.swift */,
+				29BC9F09222D5EF100249D3A /* PresentTransition.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -420,11 +426,13 @@
 				29471969222CB34F00AB488B /* GroupFeedVC.swift in Sources */,
 				29B06F56222760DB004090B6 /* SplashVC.swift in Sources */,
 				297F6CEA222561B6005FB197 /* AppDelegate.swift in Sources */,
+				29BC9F0A222D5EF100249D3A /* PresentTransition.swift in Sources */,
 				29DF1D9822296DEF00EE1BCA /* KeyboardBindView.swift in Sources */,
 				29562B1F222B907700B6ECA8 /* UserCell.swift in Sources */,
 				29B06F52222760A5004090B6 /* AuthVC.swift in Sources */,
 				29471965222CADB000AB488B /* Group.swift in Sources */,
 				297F6D18222587CC005FB197 /* CustomTextField.swift in Sources */,
+				29BC9F0C222D60D000249D3A /* UserFeedCell.swift in Sources */,
 				297F6D1622257144005FB197 /* Config.swift in Sources */,
 				29B8F276222A422F00EA6180 /* FeedCell.swift in Sources */,
 				29619815222C0D95005D07A4 /* GroupCell.swift in Sources */,

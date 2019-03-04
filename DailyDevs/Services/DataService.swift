@@ -95,6 +95,23 @@ class DataService {
         }
     }
     
+    func fetchCurrentUserPost(completion: @escaping (_ posts: [Post])->()) {
+        var userPost = [Post]()
+        REF_FEED.observeSingleEvent(of: .value) { (feedSnapshot) in
+            guard let feedSnapshot = feedSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            for feed in feedSnapshot {
+                let content = feed.childSnapshot(forPath: "content").value as! String
+                let senderId = feed.childSnapshot(forPath: "senderID").value as! String
+                
+                if Auth.auth().currentUser?.uid == senderId {
+                    let newPost = Post(content: content, senderId: senderId)
+                    userPost.append(newPost)
+                }
+            }
+            completion(userPost)
+        }
+    }
+    
     func getUserID(fromUserEmails userEmails: [String], completion: @escaping (_ listId: [String])->()) {
         var listId = [String]()
         
