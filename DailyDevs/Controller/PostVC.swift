@@ -20,6 +20,7 @@ class PostVC: UIViewController {
 
         postTextView.delegate = self
         sendButton.bindToKeyboard()
+        setupView()
     }
     
     
@@ -33,6 +34,10 @@ class PostVC: UIViewController {
                 }
             }
         }
+    }
+    
+    private func setupView() {
+        userName.text = Auth.auth().currentUser?.email
     }
     
     @IBAction func closeView(_ sender: Any) {

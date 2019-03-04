@@ -13,6 +13,11 @@ class CustomTextField: UITextField {
     
     var padding = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
     
+    
+    override func prepareForInterfaceBuilder() {
+        setupView()
+    }
+    
     override func awakeFromNib() {
         self.setupView()
     }

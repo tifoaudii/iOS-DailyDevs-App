@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		1C06901FA8E9689E0749E14C /* Pods_DailyDevsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA08A0242880368A44F54BA7 /* Pods_DailyDevsTests.framework */; };
 		2914F6102229029900742949 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2914F60F2229029900742949 /* ProfileVC.swift */; };
+		29471965222CADB000AB488B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29471964222CADB000AB488B /* Group.swift */; };
+		29471967222CB27400AB488B /* GroupFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29471966222CB27400AB488B /* GroupFeedCell.swift */; };
+		29471969222CB34F00AB488B /* GroupFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29471968222CB34F00AB488B /* GroupFeedVC.swift */; };
+		29562B1D222B83D600B6ECA8 /* AddGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29562B1C222B83D600B6ECA8 /* AddGroupVC.swift */; };
+		29562B1F222B907700B6ECA8 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29562B1E222B907700B6ECA8 /* UserCell.swift */; };
+		29619815222C0D95005D07A4 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29619814222C0D95005D07A4 /* GroupCell.swift */; };
 		297F6CEA222561B6005FB197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297F6CE9222561B6005FB197 /* AppDelegate.swift */; };
 		297F6CEC222561B6005FB197 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297F6CEB222561B6005FB197 /* FeedVC.swift */; };
 		297F6CEE222561B6005FB197 /* GroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297F6CED222561B6005FB197 /* GroupsVC.swift */; };
@@ -43,6 +49,12 @@
 
 /* Begin PBXFileReference section */
 		2914F60F2229029900742949 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		29471964222CADB000AB488B /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		29471966222CB27400AB488B /* GroupFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedCell.swift; sourceTree = "<group>"; };
+		29471968222CB34F00AB488B /* GroupFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedVC.swift; sourceTree = "<group>"; };
+		29562B1C222B83D600B6ECA8 /* AddGroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGroupVC.swift; sourceTree = "<group>"; };
+		29562B1E222B907700B6ECA8 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		29619814222C0D95005D07A4 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		297F6CE6222561B6005FB197 /* DailyDevs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDevs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		297F6CE9222561B6005FB197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		297F6CEB222561B6005FB197 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
@@ -152,6 +164,8 @@
 				29B06F55222760DB004090B6 /* SplashVC.swift */,
 				2914F60F2229029900742949 /* ProfileVC.swift */,
 				29DF1D9522294E1300EE1BCA /* PostVC.swift */,
+				29562B1C222B83D600B6ECA8 /* AddGroupVC.swift */,
+				29471968222CB34F00AB488B /* GroupFeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -161,6 +175,9 @@
 			children = (
 				297F6D17222587CC005FB197 /* CustomTextField.swift */,
 				29B8F275222A422F00EA6180 /* FeedCell.swift */,
+				29562B1E222B907700B6ECA8 /* UserCell.swift */,
+				29619814222C0D95005D07A4 /* GroupCell.swift */,
+				29471966222CB27400AB488B /* GroupFeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				29B8F277222A5E1700EA6180 /* Post.swift */,
+				29471964222CADB000AB488B /* Group.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -399,16 +417,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				297F6CEE222561B6005FB197 /* GroupsVC.swift in Sources */,
+				29471969222CB34F00AB488B /* GroupFeedVC.swift in Sources */,
 				29B06F56222760DB004090B6 /* SplashVC.swift in Sources */,
 				297F6CEA222561B6005FB197 /* AppDelegate.swift in Sources */,
 				29DF1D9822296DEF00EE1BCA /* KeyboardBindView.swift in Sources */,
+				29562B1F222B907700B6ECA8 /* UserCell.swift in Sources */,
 				29B06F52222760A5004090B6 /* AuthVC.swift in Sources */,
+				29471965222CADB000AB488B /* Group.swift in Sources */,
 				297F6D18222587CC005FB197 /* CustomTextField.swift in Sources */,
 				297F6D1622257144005FB197 /* Config.swift in Sources */,
 				29B8F276222A422F00EA6180 /* FeedCell.swift in Sources */,
+				29619815222C0D95005D07A4 /* GroupCell.swift in Sources */,
 				29DF1D9622294E1300EE1BCA /* PostVC.swift in Sources */,
 				29B8F278222A5E1700EA6180 /* Post.swift in Sources */,
+				29562B1D222B83D600B6ECA8 /* AddGroupVC.swift in Sources */,
 				29B06F54222760BE004090B6 /* LoginVC.swift in Sources */,
+				29471967222CB27400AB488B /* GroupFeedCell.swift in Sources */,
 				297F6CEC222561B6005FB197 /* FeedVC.swift in Sources */,
 				297F6D13222570DC005FB197 /* DataService.swift in Sources */,
 				2914F6102229029900742949 /* ProfileVC.swift in Sources */,

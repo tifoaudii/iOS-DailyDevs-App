@@ -22,6 +22,11 @@ let AUTH_SEGUE = "auth_segue"
 let LOGIN_WITH_EMAIL_SEGUE = "login_email_segue"
 let SPLASH_SEGUE = "splash_segue"
 let ADD_POST_SEGUE = "add_post_segue"
+let ADD_GROUP_SEGUE = "add_group_segue"
+let GROUP_FEED_SEGUE = "group_feed_segue"
 
 //CELL
 let FEED_CELL = "feed_cell"
+let USER_CELL = "user_cell"
+let GROUP_CELL = "group_cell"
+let GROUP_FEED_CELL = "group_feed_cell"

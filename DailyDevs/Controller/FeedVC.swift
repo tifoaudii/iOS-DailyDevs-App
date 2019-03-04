@@ -12,6 +12,8 @@ import Firebase
 class FeedVC: UIViewController {
 
     @IBOutlet weak var feedTableView: UITableView!
+    private var feedArray = [Post]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,11 +23,9 @@ class FeedVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        DataService.instance.fetchAllPosts { (success) in
-            if (success) {
-                DataService.instance.postArray.reverse()
-                self.feedTableView.reloadData()
-            }
+        DataService.instance.fetchAllPosts { (result) in
+            self.feedArray = result
+            self.feedTableView.reloadData()
         }
     }
 
@@ -37,12 +37,12 @@ class FeedVC: UIViewController {
 
 extension FeedVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DataService.instance.postArray.count
+        return feedArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: FEED_CELL, for: indexPath) as? FeedCell {
-            let post = DataService.instance.postArray[indexPath.row]
+            let post = feedArray[indexPath.row]
             DataService.instance.getUserName(uid: post.senderId) { (userName) in
                 cell.setupCell(profileImage: "defaultProfileImage", userName: userName, userPost: post.content)
             }
